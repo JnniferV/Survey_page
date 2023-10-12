@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr"> 
+  <head>
+    <meta charset="utf-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <meta name="description" content="formulaire pour recueillir des informations sur les besoins en travaux">
+    <title>Formulaire des besoins en travaux</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>   
+  <body>
+    <div class="container">
+      <div class="survey">
+        <h1 id="title">Estimation pour un devis</h1>
+        <p id="description"><em>Remplissez le formulaire pour que nous puissions vous donner un tarif pour la réalisation des prestations :</em></p>
+        <form id="survey-form" action="url-where-you-want-to-submit-form-data" autocomplete="on">
+          <label id="name-label" for="name">Votre nom et prénom :</label><br>
+          <input type="text" id="name" name="name" placeholder="Votre nom prénom" required><br>
+          <label id="email-label" for="email">Votre email :</label><br>
+          <input type="email" id="email" name="email" placeholder="Votre email" required><br>
+          <label id="number-label" for="number">Votre code postal :</label><br>
+          <input type="number" id="number" name="number" min="0" max="99999" placeholder="Votre code postal"><br><br>
+          <label for="dropdown">Etes-vous :</label>
+          <select id="dropdown" name="dropdown">
+            <option value="restaurant">Un restaurant</option>
+            <option value="hotel">Un hôtel</option>
+            <option value="cafe">Un café</option>
+            <option value="particulier">Un particulier</option>
+          </select>
+          <p>Est-ce :</p>
+            <input type="radio" id="urgence" name="priority" value="urgence">
+            <label for="urgence">Une urgence</label><br>
+            <input type="radio" id="rapide" name="priority" value="rapide">
+            <label for="rapide">Assez vite</label><br>
+            <input type="radio" id="long" name="priority" value="long">
+            <label for="long">Peut attendre</label><br>
+          <p>Sélectionnez le type de travaux :</p>
+            <input type="checkbox" id="travaux1" name="travaux1" value="Plomberie">
+            <label for="travaux1"> Plomberie</label><br>
+            <input type="checkbox" id="travaux2" name="travaux2" value="Electricite">
+            <label for="travaux2"> Electricité</label><br>
+            <input type="checkbox" id="travaux3" name="travaux3" value="Climatisation">
+            <label for="travaux3"> Climatisation</label><br>
+            <input type="checkbox" id="travaux4" name="travaux4" value="Autre">
+            <label for="travaux4"> Autre</label><br>
+          <div class="info-text">
+            <label for="info">Apportez nous plus d'informations sur votre demande :</label><br>
+            <textarea id="info" name="info" placeholder="Description de la panne, ce que vous recherchez..."></textarea><br>
+          </div>
+          <div class="send">
+            <button id="submit" type="submit" value="submit" onclick="alert('Bien envoyé! Nous vous donnerons une réponse au plus vite. Merci')">Envoyer</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </body>    
+</html>
